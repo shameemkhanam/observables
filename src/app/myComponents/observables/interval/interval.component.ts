@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, timer } from 'rxjs';
 import { DesignUtilityService } from 'src/app/design-utility.service';
 
 @Component({
@@ -14,7 +14,10 @@ export class IntervalComponent implements OnInit {
   constructor(private _designUtility: DesignUtilityService) { }
   
   ngOnInit() {
-    const broadcastVideos = interval(1000);
+    // const broadcastVideos = interval(1000);
+    //timer(delay,intervalTime)
+    const broadcastVideos = timer(3000, 1000);
+
     this.videoSubscription = broadcastVideos.subscribe((res) => {
       console.log(res);
       this.obsMsg = 'Video ' + res;
