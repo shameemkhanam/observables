@@ -1,8 +1,9 @@
 <!-- As a heading -->
-<nav class="navbar bg-body-tertiary bg-primary" style="letter-spacing: 5px;">
+<nav class="navbar bg-body-tertiary bg-primary" >
   <div class="container-fluid">
-    <h1 class="navbar-brand mb-0 text-light">Observables</h1>
-    <a routerLink="observables"><h2 class="navbar-brand mb-0 text-light ">Home</h2></a>
+    <h1 class="navbar-brand mb-0 text-light" style="letter-spacing: 5px;">Observables</h1>
+    <strong class="badge text-bg-danger" *ngIf="exclusive">Exclusive</strong>
+    <a routerLink="observables"><h2 class="navbar-brand mb-0 text-light " style="letter-spacing: 5px;">Home</h2></a>
   </div>
   
 </nav>
